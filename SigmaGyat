@@ -40,7 +40,10 @@ local objectsToDestroy = {
     "FireballPurple",
     "PoisonCylinder",
     "HadesFireWallPurple",
-    ""
+    "FallenKingSpikeLarge",
+    "AnubisRingPurple",
+    "BigLavaSpikeRingPurple",
+    "FirePrismSlamPurple"
 }
 
 local function destroyObjects()
