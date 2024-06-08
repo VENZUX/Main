@@ -1,0 +1,52 @@
+local RunService = game:GetService("RunService")
+
+local objectsToDestroy = {
+    "EffectPart",
+    "PickupTag",
+    "Model",
+    "BigMeteorBall",
+    "RadialIndicator",
+    "Fireball",
+    "PoisonBall",
+    "BlastIndicator", 
+    "Part",
+    "IceSpikeRing",
+    "AggroPoint",
+    "IceScratch",
+    "PoisonBeam",
+    "TreeEntSpike",
+    "RockSpikeRing",
+    "MediumCrystal",
+    "DireDeathballPink",
+    "CommanderSwordPrisonSword",
+    "SpikeShockwave",
+    "Shockball",
+    "MeteorSpecialSmall",
+    "MeteorSpecialMedium",
+    "FireBase",
+    "Whirlpool",
+    "WaterBeam",
+    "BubbleBall",
+    "ConeIndicator",
+    "LightningPanel",
+    "Lightning1",
+    "Lightning2",
+    "BlueFireCylinder",
+    "DarkFireBeam",
+    "LighteningSegment"
+}
+
+local function destroyObjects()
+    for _, objectName in ipairs(objectsToDestroy) do
+        local object = workspace:FindFirstChild(objectName)
+        if object then
+            object:Destroy()
+        end
+    end
+end
+
+local function onUpdate()
+    destroyObjects()
+end
+
+RunService.Stepped:Connect(onUpdate)
