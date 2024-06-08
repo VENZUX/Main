@@ -49,15 +49,16 @@ local objectsToDestroy = {
     "PoisonRings",
     "PurpleMeteorSpecialBig",
     "CrystalArrow",
-    "Boulder",
-    ""
+    "Boulder"
 }
 
 local function destroyObjects()
     for _, objectName in ipairs(objectsToDestroy) do
         local object = workspace:FindFirstChild(objectName)
         if object then
-            object:Destroy()
+            pcall(function()
+                object:Destroy()
+            end)
         end
     end
 end
@@ -66,4 +67,5 @@ local function onUpdate()
     destroyObjects()
 end
 
+-- Use Stepped for continuous real-time checking
 RunService.Stepped:Connect(onUpdate)
