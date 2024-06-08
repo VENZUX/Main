@@ -45,9 +45,8 @@ local objectsToDestroy = {
     "BigLavaSpikeRingPurple",
     "FirePrismSlamPurple",
     "CrystalArrow",
-    "",
-    "",
-    "",
+    "SandWhirlpool",
+    "PoisonMeteorSpecialMedium",
     ""
 }
 
