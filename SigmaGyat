@@ -39,6 +39,7 @@ local objectsToDestroy = {
     "FallenKingSpike",
     "FireballPurple",
     "PoisonCylinder",
+    "HadesFireWallPurple",
     ""
 }
 
